@@ -2,22 +2,17 @@
 require_once 'db_connect.php';
 
 
-$sql = "SELECT * FROM dishes";
+$sql = "SELECT * FROM dishes where dish_id = $_GET[dish_id]";
 $result = mysqli_query($connect ,$sql);
 $tbody='';
-if(mysqli_num_rows($result)  > 0) {    
-   while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){   
-        $tbody .=  "<tr>
-        <td><img class='img-thumbnail' src='" .$row['image']."'></td>
-           <td>" .$row['name']."</td>
-           <td><a href='details.php?dish_id=" .$row['dish_id']."'><button class='btn btn-primary btn-sm' type='button'>Details</button></a>
-           <a href='delete.php?dish_id=" .$row['dish_id']."'><button class='btn btn-danger btn-sm'type='button'>Delete</button></a>
-           </td>
-            </tr>";
-   };
-} else {
-   $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
-}
+ 
+$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+$tbody .=  "<tr>
+    <td><img class='img-thumbnail' src='" .$row['image']."'></td>
+    <td>" .$row['name']."</td>
+    <td>" .$row['price']."€</td>
+    <td>" .$row['description']."</td>
+    </tr>";
 
 mysqli_close($connect);
 ?>
@@ -48,20 +43,16 @@ mysqli_close($connect);
        </style>
    </head>
    <body>
-       <div class="manageProduct w-75 mt-3">   
-           <div class='mb-3'>
-
-                <a href= "create.php"><button class='btn btn-primary'type="button" >Add meal</button></a>
-           </div>
+       <div class="manageProduct w-75 mt-3">
            <p class='h2'>Meals</p>
-
             <table class='table table-striped'>
                <thead class='table-success'>
                    <tr>
 
                         <th>Picture</th>
                        <th>Name</th>
-                       <th>Action</th>
+                       <th>Price</th>
+                       <th>Description</th>
                    </tr>
                </thead>
                <tbody>
@@ -69,6 +60,7 @@ mysqli_close($connect);
 
                 </tbody>
            </table>
+           <img src="<?php echo $row['image']; ?>" width="350px" alt="Image not found" class="img-fluid rounded">
        </div>
    </body>
 </html>
