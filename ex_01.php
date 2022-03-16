@@ -1,7 +1,14 @@
 <?php
 
 
-// for loop
+
+
+// for loop - The for statement is used when you know 
+// how many times you want to execute a statement or 
+// a block of statements.
+// The variable must be declared, is traditionally named
+// $i (for iteration).
+// for(initializer; condition; counter;)
 
 $i=0; 
 $name="Gerlinde Sandmair";
@@ -15,7 +22,9 @@ echo "<br> Change to WHILE";
 echo "<br>";
 
 
-//while loop
+// while loop -The while statement will execute a 
+// block of code as many times as a test expression 
+// is true.
 
 $i=0; 
 $name="Gerlinde Sandmair";
@@ -31,7 +40,9 @@ while ($i<50){
 echo "<br> Change to DO WHILE ";
 echo "<br>";
 
-// do while
+// do while -  statement will execute a block of 
+// code at least once - it will then repeat the 
+// loop as many times as the condition is true.
 
 $i=0; 
 $name="Gerlinde Sandmair";
