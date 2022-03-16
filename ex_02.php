@@ -1,33 +1,17 @@
 <?php
 
+$arr=array(1,3,5,10,11,14,17,22,34,);
 
-// for loop
-
-
-
-
-$name="Gerlinde";
-$surname="Sandmair";
-
-
-
-function print_name(){
-    global $name, $surname, $full_name;
-    $full_name = $name." ".$surname;
-    return $full_name;
+foreach($arr as $value)
+{
+    echo "Value $value <br>";
 }
 
+// foreach($arr as $key=>$value){
+//     echo "Key:$key, Value:$value <br>";
+// }
 
-for($i=0; $i<50; $i++){
 
-print_name();
-echo $full_name;
-echo "<br>";
-
-function print_another_name(){
-    $full_name = $GLOBALS["name"]."".$GLOBALS["surname"];
-    echo $full_name;
-}
 ?>
 
 
