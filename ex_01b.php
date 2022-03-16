@@ -1,29 +1,49 @@
 <?php
 
-//while loop
-
-$i=0; 
-$name="Gerlinde Sandmair";
-
-echo "<br>";
-
-while ($i<50){
-    $i++;
-    echo $name;
-    echo "<br>";
-}
 
 // for loop
 
 $i=0; 
-$name="Gerlinde Sandmair";
 
-for($i=0; $i<50; $i++){
+$name = "Gerlinde";
+$surname = "Sandmair";
 
-    echo $name;
-    echo "<br>";
+function print_name(){
+    global $name, $surname, $full_name;
+    $full_name = $name." ".$surname;
+    return $full_name;
 }
 
+
+
+
+// //while loop
+
+// $i=0; 
+// $name="Gerlinde Sandmair";
+
+// echo "<br>";
+
+// while ($i<50){
+//     $i++;
+//     echo $name;
+//     echo "<br>";
+// }
+
+// echo "<br> Wechsel zu DO WHILE ";
+// echo "<br>";
+
+// // do while
+
+// $i=0; 
+// $name="Gerlinde Sandmair"; -->
+
+// do 
+// {
+//     echo $name;
+//     echo "<br>";
+//     $i++;
+//     }while($i<50);
 
 ?>
 
@@ -47,10 +67,19 @@ for($i=0; $i<50; $i++){
 </head> 
 <body>
 <p>
-<div>
-<? echo $tbody;?>
+<div><h1>
+<?php
 
-    </div>
+    /// for loop
+    for($i=0; $i<50; $i++){
+        print_name();
+        echo $full_name;
+        echo "<br>";
+    }
+
+?>
+</h1>
+</div>
      </p>
   </body>
   </html>
