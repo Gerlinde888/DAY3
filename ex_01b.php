@@ -14,9 +14,6 @@ function print_name(){
     return $full_name;
 }
 
-
-
-
 // //while loop
 
 // $i=0; 
