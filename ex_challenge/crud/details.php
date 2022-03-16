@@ -8,10 +8,10 @@ $tbody='';
  
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $tbody .=  "<tr>
-    <td><img class='img-thumbnail' src='" .$row['image']."'></td>
+    <td><img class='img-thumbnail' src='" .$row['img']."'></td>
     <td>" .$row['name']."</td>
     <td>" .$row['price']."€</td>
-    <td>" .$row['description']."</td>
+    <td>" .$row['desc']."</td>
     </tr>";
 
 mysqli_close($connect);
@@ -60,7 +60,7 @@ mysqli_close($connect);
 
                 </tbody>
            </table>
-           <img src="<?php echo $row['image']; ?>" width="350px" alt="Image not found" class="img-fluid rounded">
+           <img src="<?php echo $row['img']; ?>" width="350px" alt="Image not found" class="img-fluid rounded">
        </div>
    </body>
 </html>

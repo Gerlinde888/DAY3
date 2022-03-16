@@ -8,7 +8,7 @@ $tbody='';
 if(mysqli_num_rows($result)  > 0) {    
    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){   
         $tbody .=  "<tr>
-        <td><img class='img-thumbnail' src='" .$row['image']."'></td>
+        <td><img class='img-thumbnail' src='" .$row['img']."'></td>
            <td>" .$row['name']."</td>
            <td><a href='details.php?dish_id=" .$row['dish_id']."'><button class='btn btn-primary btn-sm' type='button'>Details</button></a>
            <a href='delete.php?dish_id=" .$row['dish_id']."'><button class='btn btn-danger btn-sm'type='button'>Delete</button></a>
@@ -51,15 +51,14 @@ mysqli_close($connect);
        <div class="manageProduct w-75 mt-3">   
            <div class='mb-3'>
 
-                <a href= "create.php"><button class='btn btn-primary'type="button" >Add meal</button></a>
+        <a href= "create.php"><button class='btn btn-primary'type="button" >Add meal</button></a>
            </div>
            <p class='h2'>Meals</p>
 
             <table class='table table-striped'>
                <thead class='table-success'>
                    <tr>
-
-                        <th>Picture</th>
+                       <th>Picture</th>
                        <th>Name</th>
                        <th>Action</th>
                    </tr>
