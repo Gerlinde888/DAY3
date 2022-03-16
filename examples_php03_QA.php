@@ -76,7 +76,7 @@ while ($i<10){
 // $arr=array(1,3,5,10);
 
 // foreach($arr as $value){
-//     echo "Value" $value "<br>";
+//     echo "Value $value <br>";
 // }
 // foreach($arr as $key=>$value){
 //     echo "Key:$key, Value:$value <br>";

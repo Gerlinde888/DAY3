@@ -13,7 +13,9 @@ function print_name(){
     $full_name = $name." ".$surname;
     return $full_name;
 }
-
+  /// for loop
+  for($i=0; $i<50; $i++){
+    
 // //while loop
 
 // $i=0; 
@@ -66,13 +68,12 @@ function print_name(){
 <p>
 <div><h1>
 <?php
-
-    /// for loop
-    for($i=0; $i<50; $i++){
-        print_name();
-        echo $full_name;
-        echo "<br>";
-    }
+print_name();
+echo $full_name;
+echo "<br>";
+}
+    
+    
 
 ?>
 </h1>

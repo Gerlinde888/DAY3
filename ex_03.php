@@ -1,47 +1,16 @@
 <?php
 
+$arr=array(1,3,5,10,11,14,17,22,34,);
 
-// for loop
-
-$i=0; 
-$name="Gerlinde Sandmair";
-
-for($i=0; $i<50; $i++){
-
-    echo $name;
-    echo "<br>";
-}
-echo "<br> Change to WHILE";
-echo "<br>";
-
-
-//while loop
-
-$i=0; 
-$name="Gerlinde Sandmair";
-
-echo "<br>";
-
-while ($i<50){
-    $i++;
-    echo $name;
-    echo "<br>";
-}
-
-echo "<br> Change to DO WHILE ";
-echo "<br>";
-
-// do while
-
-$i=0; 
-$name="Gerlinde Sandmair";
-
-do 
+foreach($arr as $value)
 {
-    echo $name;
-    echo "<br>";
-    $i++;
-    }while($i<50);
+    echo "Value $value <br>";
+}
+
+// foreach($arr as $key=>$value){
+//     echo "Key:$key, Value:$value <br>";
+// }
+
 
 ?>
 
@@ -66,6 +35,7 @@ do
 <body>
 <p>
 <div>
+    <?php echo "<h1>Gerlinde Sandmair</h1>"; ?>
 
     </div>
      </p>
